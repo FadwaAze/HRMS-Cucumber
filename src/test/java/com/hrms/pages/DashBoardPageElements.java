@@ -1,5 +1,7 @@
 package com.hrms.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -23,6 +25,11 @@ public class DashBoardPageElements extends CommonMethods {
 
 	@FindBy(id = "menu_pim_viewEmployeeList")
 	public WebElement empListPage;
+	
+	
+	@FindBy(xpath="//div[@class='menu']/ul/li")
+	public List<WebElement> dashMenu;// 8 tabs in the dashboard
+	
 
 	public DashBoardPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);

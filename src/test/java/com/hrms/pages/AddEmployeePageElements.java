@@ -11,6 +11,9 @@ public class AddEmployeePageElements extends CommonMethods {
 
 	@FindBy(id = "firstName")
 	public WebElement firstName;
+	
+	@FindBy (xpath="//input[@id='middleName']")
+	public WebElement middletName;
 
 	@FindBy(id = "lastName")
 	public WebElement lastName;

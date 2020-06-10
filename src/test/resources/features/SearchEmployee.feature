@@ -1,8 +1,10 @@
 # Group Scenarion based on functionality
+
 @searchEmplyee @sprint13
 Feature: Employee Search
 
-  Background: 
+  Background: #used to define steps that are common for all tests in the same feature file
+  
     Given user is logged with valid admin credentials
     And user navigate to employee list page
 
