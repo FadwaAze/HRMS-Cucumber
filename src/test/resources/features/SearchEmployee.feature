@@ -13,13 +13,13 @@ Feature: Employee Search
     #Given user is navigated to HRMS--> Taking care by using Hooks class from Steps package
     #And user is logged with valid admin credentials
     #And user navigate to employee list page
-    When user enters valid employee id
+    When user enters valid employee id "10079"
     And click on search button
     Then user see employee information is displayed
 
   @regression
   Scenario: Search employee by name
     
-    When user enters valid employee name and last name
+    When user enters valid employee "John" and "Smith"
     And click on search button
     Then user see employee information is displayed

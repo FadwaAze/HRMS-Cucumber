@@ -7,13 +7,15 @@ import org.openqa.selenium.support.PageFactory;
 import com.hrms.utils.CommonMethods;
 import com.hrms.utils.ConfigsReader;
 
+
+
 public class AddEmployeePageElements extends CommonMethods {
 
 	@FindBy(id = "firstName")
 	public WebElement firstName;
 	
 	@FindBy (xpath="//input[@id='middleName']")
-	public WebElement middletName;
+	public WebElement middleName;
 
 	@FindBy(id = "lastName")
 	public WebElement lastName;
@@ -35,14 +37,16 @@ public class AddEmployeePageElements extends CommonMethods {
 
 	@FindBy(id = "btnSave")
 	public WebElement saveBtn;
+	
+	
 
 	public AddEmployeePageElements() {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void createEmpLogin() {
-		sendText(username, ConfigsReader.getProperty("empUserName"));
-		sendText(password, ConfigsReader.getProperty("empPassword"));
+	public void createEmpLoginCR(String uid, String pwd) {
+		sendText(username, uid);
+		sendText(password, pwd);
 		sendText(confirmPassword, ConfigsReader.getProperty("empPassword"));
 		click(saveBtn);
 	}

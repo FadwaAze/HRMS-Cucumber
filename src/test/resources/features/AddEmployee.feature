@@ -1,3 +1,5 @@
+#Author: syntaxteam
+@sprint6 @addEmployee
 Feature: Add new Employee
 
   Background: 
@@ -6,33 +8,32 @@ Feature: Add new Employee
 
   @smoke
   Scenario: Add Employee with first and lastname
-    When user enters employees "John" and "Smith"
+    When user enters employees "John" and "Doe"
     And user clicks save button
-    Then "John Smith" is added successfully
+    Then "John Doe" is added successfully
 
   @regression
   Scenario: Add Employee without employee id
-    When user enters employees first name and last name
+    When user enters employees "Jane" and "Smith"
     And user deletes employee id
     And user clicks save button
-    Then employee is added successfully
+    Then "Jane Smith" is added successfully
 
   @smoke
   Scenario: AddEmployee and create Login Credentials
-    When user enters employees first name and last name
+    When user enters employees "James" and "Smith"
     And user clicks on create login checkbox
-    And user enters login credentials
+    And user enters login credentials as "James123" and "James123.."
     And user clicks save button
-    Then employee is added successfully
+    Then "James Smith" is added successfully
 
-  #to perform DDT in cucumber we use Scenario Outline  --> to add multiple employees repeating the entire scenario based on examples
+  #to perform DDT in cucumber we use Scenario Outline with Examples
   @regression
   Scenario Outline: Adding multiple employees
     When user enter employees "<FirstName>", "<MiddleName>" and "<LastName>"
     And user clicks save button
     Then "<FirstName>", "<MiddleName>" and "<LastName>" is added successfully
 
-    #Example works for the entire Scenario
     Examples: 
       | FirstName | MiddleName | LastName  |
       | James     | J          | Smith     |
@@ -40,29 +41,14 @@ Feature: Add new Employee
       | Sohil     | S          | Instuctor |
       | Yunus     | Emre       | Yakut     |
 
-  #adding multiple employees using Cucumber DataTable --> repeat only one step to add employees before move to the next step /
-  @smoke
+  #adding multiple employees using Cucumber DataTable
+  @regression
   Scenario: Adding multiple employees
     When user enters employee details and click on save then employee is added
       | FirstName | MiddleName | LastName |
-      | John      | J          | Smith    |
-      | Jane      | J          | Doe      |
-    #Then employee is added successfully
-    
-    @Excel
-    Scenario: Adding multiple employees from excel
+      | John      | J          | Doe      |
+      | Jane      | J          | Smith    |
+
+  @regression
+  Scenario: Adding multiple employees from excel
     When user enters employee data from "EmployeeLoginCredentials" excel sheet then employee is added
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

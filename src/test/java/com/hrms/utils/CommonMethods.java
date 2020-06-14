@@ -285,8 +285,11 @@ public class CommonMethods extends PageInitializer {
 	 * @return
 	 * 
 	 */
-	public static String takeScreenShot(String fileName) {
+	public static byte[] takeScreenShot(String fileName) {
 		TakesScreenshot ts = (TakesScreenshot) driver;
+		
+		byte[] picBytes=ts.getScreenshotAs(OutputType.BYTES);
+		
 		File File = ts.getScreenshotAs(OutputType.FILE);
 		String destinationFile = Constants.SCREENSHOT_FILEPATH + fileName + getTimeStemp() + ".png";
 
@@ -297,7 +300,7 @@ public class CommonMethods extends PageInitializer {
 			ex.printStackTrace();
 		}
 
-		return destinationFile;
+		return picBytes;
 	}
 
 	/**

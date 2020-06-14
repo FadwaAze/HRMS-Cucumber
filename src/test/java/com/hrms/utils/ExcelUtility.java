@@ -78,7 +78,7 @@ public class ExcelUtility {
 				excelMap.put(cellData(0, c), cellData(r, c));
 				
 			}
-			list.add(excelMap);
+			list.add(excelMap);// add data to my list
 			
 		}
 		return list;

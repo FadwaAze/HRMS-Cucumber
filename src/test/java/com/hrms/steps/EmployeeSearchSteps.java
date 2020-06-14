@@ -15,9 +15,9 @@ public class EmployeeSearchSteps extends CommonMethods {
 		jsClick(dashboard.empListPage);
 	}
 
-	@When("user enters valid employee id")
-	public void user_enters_valid_employee_id() {
-		sendText(viewEmp.empID, "10079");
+	@When("user enters valid employee id {string}")
+	public void user_enters_valid_employee_id(String empID) {
+		sendText(viewEmp.empID, empID);
 	}
 
 	@When("click on search button")
@@ -28,15 +28,15 @@ public class EmployeeSearchSteps extends CommonMethods {
 	@Then("user see employee information is displayed")
 	public void user_see_employee_information_is_displayed() {
 		System.out.println("Employee is displayed");
-		tearDown();
+		
 	}
 
-	@When("user enters valid employee name and last name")
+	@When("user enters valid employee {string} and {string}")
 	public void user_enters_valid_employee_name_and_last_name() {
 		sendText(login.username, ConfigsReader.getProperty("username"));
 		sendText(login.password, ConfigsReader.getProperty("password"));
 		 click(login.loginBtn);
-		 tearDown();
+		
 	}
 
 }
