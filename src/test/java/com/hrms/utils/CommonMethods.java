@@ -176,7 +176,7 @@ public class CommonMethods extends PageInitializer {
 	 * 
 	 * @param element
 	 */
-	public static void switchToFrame(WebElement element) {
+	public static void switchToFrame(WebElement element) {// example of oveloading method 
 		try {
 			driver.switchTo().frame(element);
 

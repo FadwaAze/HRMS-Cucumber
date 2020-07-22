@@ -19,4 +19,6 @@
 /Users/fadwaazeroual/eclipse-workspace/Hrms/src/test/java/com/hrms/utils/ConfigsReader.java
 /Users/fadwaazeroual/eclipse-workspace/Hrms/src/test/java/com/hrms/pages/PersonalDetailsPageElement.java
 /Users/fadwaazeroual/eclipse-workspace/Hrms/src/test/java/com/hrms/steps/SauceDemoLoginSteps.java
+/Users/fadwaazeroual/eclipse-workspace/Hrms/src/test/java/com/hrms/runners/FailedRunner.java
+/Users/fadwaazeroual/eclipse-workspace/Hrms/src/test/java/com/hrms/steps/UIvsDatabaseValidation.java
 /Users/fadwaazeroual/eclipse-workspace/Hrms/src/test/java/com/hrms/runners/SmokeRunner.java

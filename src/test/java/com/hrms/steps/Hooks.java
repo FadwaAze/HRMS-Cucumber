@@ -16,7 +16,7 @@ public class Hooks {// Block of code execute before and after scenarios
 
 	
 	@After // will always execute even if there are fails in our tests
-	public void end(Scenario scenario) {
+	public void end(Scenario scenario) {//Scenario is an interface 
 		byte[]pic;
 		if(scenario.isFailed()) {                 //scenario.getName will be the name of the screenshot
 			pic=CommonMethods.takeScreenShot("failed/"+scenario.getName());

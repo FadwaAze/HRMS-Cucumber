@@ -13,6 +13,7 @@ import io.cucumber.java.en.Then;
 
 //Example of DataTable with No heather
 public class DashboardSteps extends CommonMethods{
+	
 	@Then("user see dashboard menu is displayed")
 	public void user_see_dashboard_menu_is_displayed(DataTable dashBoardMenu) {
 		

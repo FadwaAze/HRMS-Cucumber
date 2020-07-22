@@ -1,7 +1,7 @@
 #Author: azeroualfadwa@gmail.com
 Feature: Dashboard
 
-  @inprogress
+  @actual
   Scenario: Dashboard menu view for admin
     When user is logged with valid admin credentials
     Then user see dashboard menu is displayed
